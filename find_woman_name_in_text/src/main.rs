@@ -1,12 +1,13 @@
 use std::io;
 
 fn main() {
+    const TARGET:&str = "Laura";
     loop {
         let cut_input = get_input_from_user();
 
         let woman_name = get_woman_name_from_text(&cut_input);
 
-        if woman_name.eq(&Some("Laura".to_string())) {
+        if woman_name.eq(&Some(TARGET.to_string())) {
             println!("Laura is my bro <3");
             break;
         }
