@@ -1,5 +1,5 @@
 fn main() {
-    print_rgb("Goodbye Cruel World", (0xFF, 0x00, 0x00));
+    print_rgb("Goodbye Cruel World", (0xFF, 0x00, 0xFF));
 }
 
 fn print_rgb(text: &str, color: (u8, u8, u8)) {
