@@ -13,7 +13,7 @@ fn get_input_from_user() -> String {
 }
 
 fn print_rainbow_text(text: &str) {
-    for current_color_index in 0..text.len() {
+    for current_color_index in 0..text.chars().count() {
         RAINBOW.get(current_color_index % RAINBOW.len()).unwrap().write(&text.chars().nth(current_color_index).unwrap().to_string());
     }
     println!();
