@@ -23,7 +23,7 @@ fn get_input_from_user() -> String {
 }
 
 fn get_woman_name_from_text(text: &str) -> Option<String> {
-    let words = text.split(" ");
+    let words = text.split_whitespace();
 
     for word in words {
         if word.starts_with(|c: char| c.is_uppercase()) && word.ends_with('a') {
