@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "rust-party"
+name = "find_woman_name_in_text"
 version = "0.1.0"
