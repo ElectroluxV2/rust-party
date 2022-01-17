@@ -1,15 +1,20 @@
 const NUMBER_OF_SEGMENTS: u32 = 6;
 const ROWS_IN_FIRST_SEGMENT: u32 = 5;
 
-const FIRST: f32 = (ROWS_IN_FIRST_SEGMENT - 1) as f32;
-const LAST: f32 = FIRST + (NUMBER_OF_SEGMENTS - 2) as f32;
-const SUM: f32 = ((FIRST + LAST) / 2.0) * (NUMBER_OF_SEGMENTS - 1) as f32;
-const TOTAL_TREE_WIDTH: u32 = 1 + 2 * (ROWS_IN_FIRST_SEGMENT - 1) + 2 * (SUM) as u32;
+const WIDTH_FIRST: f32 = (ROWS_IN_FIRST_SEGMENT - 1) as f32;
+const WIDTH_LAST: f32 = WIDTH_FIRST + (NUMBER_OF_SEGMENTS - 2) as f32;
+const WIDTH_SUM: f32 = ((WIDTH_FIRST + WIDTH_LAST) / 2.0) * (NUMBER_OF_SEGMENTS - 1) as f32;
+const TOTAL_TREE_WIDTH: u32 = 1 + 2 * (ROWS_IN_FIRST_SEGMENT - 1) + 2 * (WIDTH_SUM) as u32;
+
+const HEIGHT_FIRST: f32 = (ROWS_IN_FIRST_SEGMENT) as f32;
+const HEIGHT_LAST: f32 = 2.0 * HEIGHT_FIRST + (NUMBER_OF_SEGMENTS - 1) as f32;
+const TOTAL_TREE_HEIGHT: u32 = ((HEIGHT_FIRST + HEIGHT_LAST) / 2.0) as u32 * NUMBER_OF_SEGMENTS;
 
 const LOG_WIDTH: u32 = 1 + 2 * (ROWS_IN_FIRST_SEGMENT - 1);
 const LOG_HEIGHT: u32 = NUMBER_OF_SEGMENTS;
 
 fn main() {
+    print!("\x1b[?3l");
     clear_terminal();
     hide_cursor();
 
@@ -92,7 +97,7 @@ fn move_cursor_to_position(position: (u32, u32)) -> (u32, u32) {
 }
 
 fn clear_terminal() {
-    print!("\x1b[0;0H\x1b[0J");
+    print!("\x1b[1;1H\x1b[0J");
 }
 
 fn hide_cursor() {
