@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/print_rainbowed_text/print_rainbowed_text.iml" filepath="$PROJECT_DIR$/print_rainbowed_text/print_rainbowed_text.iml" />
       <module fileurl="file://$PROJECT_DIR$/println_the_saga/println_the_saga.iml" filepath="$PROJECT_DIR$/println_the_saga/println_the_saga.iml" />
       <module fileurl="file://$PROJECT_DIR$/random_part_of_text/random_part_of_text.iml" filepath="$PROJECT_DIR$/random_part_of_text/random_part_of_text.iml" />
+      <module fileurl="file://$PROJECT_DIR$/recursive_functions_for_arrays/recursive_functions_for_arrays.iml" filepath="$PROJECT_DIR$/recursive_functions_for_arrays/recursive_functions_for_arrays.iml" />
     </modules>
   </component>
 </project>
